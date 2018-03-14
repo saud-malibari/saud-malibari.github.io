@@ -7,87 +7,49 @@
   background-color: #0564BD;
   color: #FFF;
 }
-   
-
             </style>
-           
     </head>
-    <body>
-    
-       
+    <body>  
   <h1>My ToDo List App</h1>
   <input type="text" id="newItem" placeholder="A new item..." />
   <button id="addButton" onclick="addClick()">Add</button>
   <ul id="toDoList">
-          
-  </ul>
+            </ul>
   <button onclick=" deleteButton()">Delete all</button>
-  
-  <h4>
+    <h4>
   &copy;
   Saud Malibari / 
   1406834 / 
   CPIT-405
   </h4>
-
-
-  <script>
-
-                
+  <script>              
         var item = document.getElementById("newItem")
         var list = document.getElementById("toDoList")
-
-
-
-
-
 var lc = list.children
 var i =0;
-
-
 function addClick() {
 var txt = document.createTextNode(item.value)
 var listItem = document.createElement("li")
 listItem.appendChild(txt)
 list.appendChild(listItem)
-
 for( ;i < lc.length ; i++){
   addCloseBtn(lc[i]);
 }
-
 }
-
-
-
-
 function addCloseBtn(le){
   var span = document.createElement("span")
   var txt = document.createTextNode("\u00D7")
   span.appendChild(txt)
-
   span.onclick = function(){
     var liit = this.parentElement
     liit.parentElement.removeChild(liit)
   }
   le.appendChild(span)
-  
 }
-
-
-
-
 function deleteButton() {
 var listChild = list.children
 listChild[0].parentElement.removeChild(listChild[0])
-
-}
-
-
-        
+}      
         </script>
-
-
-
     </body>
-
 </html>
