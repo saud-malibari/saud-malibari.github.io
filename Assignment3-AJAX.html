@@ -80,17 +80,14 @@
 
     </div>
 
-    <button onclick="upDateDOM()">view the books!</button>
-
 
     <div id="book-listing">
             <h3>select to sort:</h3>
 
-            <select id="sort-select">
+            <select id="sort-select" onchange="upDateDOM()">
 
-                <option ></option>
                 <option value="page">sort by page count</option>
-                <option value="date">sort by date</option>
+                <option value="date" selected>sort by date</option>
                 <option value="stars">sort by star rating</option>
 
             </select>

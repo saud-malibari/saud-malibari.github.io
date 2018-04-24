@@ -9,8 +9,9 @@ function returnBooks(){
         datatype: "json",
 
         success: function(data){
-            
+            books=[]
             for( i=0; i < data.items.length; i++){
+                
                 books.push({
                     tital:'' + data.items[i].volumeInfo.title + '', 
                     author: '' + data.items[i].volumeInfo.authors + '', 
@@ -20,7 +21,7 @@ function returnBooks(){
                     sRate: data.items[i].volumeInfo.averageRating, 
                     img:'' + data.items[i].volumeInfo.imageLinks.thumbnail + ''
                 })
-            }
+            }upDateDOM()
         },
 
         type: 'GET'
