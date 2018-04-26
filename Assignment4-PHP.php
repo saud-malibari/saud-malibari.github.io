@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>books list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+    body{
+        background-color: #c3c388;
+        margin: 20pt;
+
+    }
+
+    #nav{
+        background-color: #666633;
+        padding: 15pt;
+        margin: 20pt;
+        border: black solid;
+        font-style: oblique;
+    }
+
+    #menu li{
+        background-color:#99994d;
+        display: inline;
+        font-size: 20pt;
+        margin: 20pt;
+        padding: 10pt;
+    }
+
+    #menu li:first-child{
+        background-color: #802b00;
+        border: black solid;
+        color: white;
+        font-size: 30pt;
+        margin: 20pt;
+        padding: 20pt 40pt;
+    }
+
+    #list-books{
+        background-color: #666633;
+        padding: 20pt;
+        border: black solid;
+    }
+
+    #list-books li{
+        background-color: #99994d;
+        padding: 20pt;
+        margin: 10pt;
+        border: black solid;
+    }
+
+    #list-books img{
+        border: black solid;
+        
+    }
+    #list-books p{
+        font-size: 15pt;
+        border: black ;
+        font-style: oblique;
+        
+    }
+    
+    
+    </style>
+    
+</head>
+<body>
+
+    <div id="nav">
+        <ul id="menu">
+            <li>goodreads</li>
+            <li>Home</li>
+            <li>My Books</li>
+            <li>Browse</li>
+            <li>Search :   &emsp;   <input type="text" id="search">  &ensp; <button id="button">Go</button></li>
+
+        </ul>
+
+    </div>
+
+
+    <div id="book-listing">
+            <h3>select to sort:</h3>
+
+            <select id="sort-select" onchange="upDateDOM()">
+
+                <option value="page">sort by page count</option>
+                <option value="date" selected>sort by date</option>
+                <option value="stars">sort by star rating</option>
+
+            </select>
+
+           
+            <ul id="list-books">
+
+                
+            </ul>
+
+
+    </div>
+
+
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+                <script src="main.js"></script>
+
+<h4>
+    &copy;
+    Saud Malibari / 
+    1406834 / 
+    CPIT-405
+    </h4>
+    
+    
+</body>
+</html>
